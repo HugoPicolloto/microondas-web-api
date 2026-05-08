@@ -1,0 +1,61 @@
+﻿/* HEADER */
+.header {
+    background: #1f2937;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .auth-box input {
+        padding: 8px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        width: 120px;
+    }
+
+    .auth-box button {
+        background: #00c853;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+        .auth-box button:hover {
+            background: #00e676;
+        }
+
+.api-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.online {
+    background: #00ff00;
+}
+
+.offline {
+    background: red;
+}
+

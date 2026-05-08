@@ -1,0 +1,36 @@
+﻿<body>
+
+    <header></header>
+    <div id="modalNovoPrograma" class="modal hidden">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3>Novo Programa</h3>                
+            </div>
+
+            <div class="modal-body">
+
+                <input id="novoNome" type="text" placeholder="Nome">
+                <input id="novoAlimento" type="text" placeholder="Alimento">
+                <input id="novoTempo" type="text" placeholder="Tempo">
+                <input id="novoPotencia" type="text" placeholder="Potência">
+                <input id="novoSimbolo" type="text" placeholder="Símbolo">
+
+                <textarea id="novaInstrucao" type="text"
+                          placeholder="Instrução"></textarea>
+
+            </div>
+
+            <div class="modal-footer">
+                <button onclick="salvarPrograma()">
+                    Salvar
+                </button>
+                <button onclick="fecharModal()">
+                    Cancelar
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Microondas System</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    @await Html.PartialAsync("_Header")
+
+
+    <!-- MAIN -->
+    <main class="container main">
+
+        <!-- TÍTULO -->
+        <section class="title">
+            <h1>Microondas</h1>
+        </section>
+
+        <!-- DISPLAY -->
+        <section class="card display-card">
+            <div id="stringDisplay" class="display"></div>
+        </section>
+
+        <!-- CONTROLES TEMPO / POTÊNCIA -->
+        <section class="grid-2">
+
+            <div class="card">
+                <label>Tempo</label>
+                <input id="tempo" type="text" onclick="selecionarInput('tempo', this)">
+            </div>
+
+            <div class="card">
+                <label>Potência</label>
+                <input id="potencia" type="text" onclick="selecionarInput('potencia', this)">
+            </div>
+
+        </section>
+
+        <!-- PROGRAMAS -->
+        <section class="card">
+            <div class="section-header">
+                <h3>Programas</h3>
+                <button class="btn-programa" onclick="abrirNovoPrograma()">+ Novo Programa</button>
+            </div>
+
+            <div id="programasFixos" class="list"></div>
+        </section>
+
+        <!-- TECLADO -->
+        <section class="card keypad">
+
+            <div class="keys">
+                <button onclick="addNumero(1)">1</button>
+                <button onclick="addNumero(2)">2</button>
+                <button onclick="addNumero(3)">3</button>
+                <button onclick="addNumero(4)">4</button>
+                <button onclick="addNumero(5)">5</button>
+
+                <button onclick="addNumero(6)">6</button>
+                <button onclick="addNumero(7)">7</button>
+                <button onclick="addNumero(8)">8</button>
+                <button onclick="addNumero(9)">9</button>
+                <button onclick="addNumero(0)">0</button>
+            </div>
+
+        </section>
+
+        <!-- AÇÕES -->
+        <section class="actions">
+            <button class="start" onclick="iniciar()">Iniciar</button>
+            <button class="stop" onclick="pauseOuCancelar()">Pausar/Cancelar</button>
+        </section>
+    </main>
+
+    @await Html.PartialAsync("Components/_NovoProgramaModal")
+    @await Html.PartialAsync("Components/_ModalMensagem")
+
+</body>
+</html>

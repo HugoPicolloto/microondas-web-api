@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Infrastructure\Data\**" />
+    <Compile Remove="Pages\**" />
+    <Content Remove="Infrastructure\Data\**" />
+    <Content Remove="Pages\**" />
+    <EmbeddedResource Remove="Infrastructure\Data\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <None Remove="Infrastructure\Data\**" />
+    <None Remove="Pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Application\DTOs\Request\MicroondasEvento.cs" />
+    <Compile Remove="Application\DTOs\Response\MicroondasExecucaoResult.cs" />
+    <Compile Remove="Application\Enums\MicroondasEventosTipo.cs" />
+    <Compile Remove="Application\Interfaces\Programas\IProgramaService1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\microondas.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="logs.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\microondas.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.26" />
+  </ItemGroup>
+
+</Project>

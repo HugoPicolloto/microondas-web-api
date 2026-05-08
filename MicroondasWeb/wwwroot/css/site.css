@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Consolas, sans-serif;
+    background: #f5f6fa;
+}
+
+/* container padrão */
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 15px;
+}
+
+/* MAIN */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* TITULO */
+.title h1 {
+    margin: 0;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* DISPLAY */
+.display {
+    background: #111827;
+    color: #00ff99;
+    padding: 15px;
+    min-height: 50px;
+    font-family: monospace;
+    border-radius: 6px;
+}
+
+/* GRID TEMPO / POTÊNCIA */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* HEADER DE SEÇÃO */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LISTA PROGRAMAS */
+.list {
+    display: flex;
+    gap: 8px;
+}
+
+.programa-item {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .programa-item:hover {
+        background: #f3f4f6;
+    }
+
+/* TECLADO */
+.keypad .keys {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.keypad button {
+    padding: 10px;
+}
+
+/* AÇÕES */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.start {
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+.stop {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+}
